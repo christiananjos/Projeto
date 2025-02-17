@@ -3,8 +3,11 @@
   <div class="logo">
     <img src="https://www.basketball-loewen.de/wp-content/uploads/2022/12/VWFS_LOGO-980-e1671006285144.jpg">
   </div>
+  <div class="user-ola">
+    <span class="greeting"><strong>Olá,</strong></span>
+  </div>
   <div class="user-infoNomeSocial">
-    <span class="greeting"><strong>Olá, Fernanda Moreira</strong></span>
+    <span class="greeting"><strong>Fernanda Moreira</strong></span>
     <span class="label">NOME SOCIAL</span>
   </div>
   <div>
@@ -160,7 +163,7 @@
   .user-info {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     margin-left: 12px;
     gap: 4px;
   }
@@ -177,11 +180,19 @@
   .user-infoNomeSocial {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    margin-left: 30px;
+    text-align: left;
     gap: 4px;
-    width: 200px;
+    width: 145px;
     height: 37px;
+  }
+
+  .user-ola {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    height: 37px;
+    width: 35px;
+    font-weight: 700;
   }
 
   .label {
