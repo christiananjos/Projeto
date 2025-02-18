@@ -20,7 +20,7 @@
   <div class="contract-info">
     <span class="label-selecione-contrato"><strong>Selecione um contrato</strong></span>
     <span>
-      <select class="form-select-contrato" style="">
+      <select class="form-select-contrato">
         <option selected>001234567</option>
         <option value="1">002345678</option>
         <option value="2">003456789</option>
@@ -29,8 +29,11 @@
     </span>
     <strong class="vehicle-info">Polo 1.6 MSI 16v AT6 ETA</strong>
   </div>
-  <div class="logout">
-    <a href="#"><i class="bi bi-box-arrow-right"></i> Sair</a>
+  <div style="position: absolute; top: 40px; right: 160px;">
+    <a href="#">
+      <i class="bi bi-box-arrow-right" style="margin-right: 5px;color: #095B73;"></i>
+      <strong style="color: #095B73">Sair</strong>
+    </a>
   </div>
 </header>
 
@@ -230,16 +233,21 @@
     margin-left: 50px;
   }
 
-  .logout a {
-    text-decoration: none;
-    color: #003f5c;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
+  .btn-sair {
+    width: 200px;
+    height: 19px;
+    font-weight: 700px;
+    font-size: 16px;
+    color: #095B73;
+    margin-left: 50px;
   }
 
-  .logout-icon {
-    margin-right: 5px;
+  .logout {
+    width: 18px;
+    height: 18px;
+    gap: 4px;
+    color: #003f5c;
+    font-weight: bold;
   }
 
   .sidebar {
