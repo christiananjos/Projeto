@@ -96,15 +96,22 @@
 </aside>
 
 <div class="main-content">
-  <div style="width: 100%; height: 50%; background-color: #f0f0f0;">
-    Carrousel
+  <div style="width: 100%; height: 50%; background-color: #db1515;">
+    Carousel
   </div>
   <div style="width: 100%; height: 50%; background-color: #f0f0f0;">
     <div style="display: flex; width: 100%; height: 100%; background-color: #f0f0f0;">
-      <div style="width: 50%; height: 100%; background-color: #f0f0f0;">
-      Grafico
+      <div style="width: 50%; height: 100%; background-color: #F1F1F1;">
+      <div class="div-grafico">
+        <div class="container">
+          <div class="contract-container">
+              <h5 style="font-weight: nor;">Contrato</h5>
+              <span class="contract-badge">001234567</span>
+          </div>
       </div>
-      <div style="width: 50%; height: 100%; background-color: #f0f0f0;">
+      </div>
+      </div>
+      <div style="width: 50%; height: 100%; background-color: #2a0808;">
       Menu rapido
       </div>
     </div>
@@ -355,7 +362,7 @@
     text-decoration: underline;
   }
 
-  .copy{
+  .copy {
     width: 100%;
     text-align: center;
     margin-top: 20px;
@@ -363,5 +370,20 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .div-grafico {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  
+  .contract-badge {
+    background-color: #0D485E;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-weight: bold;
   }
 </style>
