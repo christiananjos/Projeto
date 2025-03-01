@@ -97,40 +97,41 @@
 </aside>
 
 <div class="main-content">
-  <div>
+  
 
     @if (images) {
-    <ngb-carousel>
-      <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <img [src]="images[0]" alt="Random first slide" />
-        </div>
-        <div class="carousel-caption">
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <img [src]="images[1]" alt="Random second slide" />
-        </div>
-        <div class="carousel-caption">
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <img [src]="images[2]" alt="Random third slide" />
-        </div>
-        <div class="carousel-caption">
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </div>
-      </ng-template>
-    </ngb-carousel>
+    <div style=" width:100%; height: 50%;">
+      <ngb-carousel>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[0]" alt="Random first slide" />
+          </div>
+          <div class="carousel-caption">
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[1]" alt="Random second slide" />
+          </div>
+          <div class="carousel-caption">
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[2]" alt="Random third slide" />
+          </div>
+          <div class="carousel-caption">
+            <h3>Third slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
     }
-  </div>
 
   <div style="width: 100%; height: 46.5%; margin-top: 35px;">
     <div style="display: flex; width: 100%; height: 100%;">
@@ -296,332 +297,303 @@
 
       </div>
     </div>
-
-    <!-- Footer Section -->
-
-    <!-- <footer class="footer">
-  <div style="width: 743px; height: 191px;background-color: #2a0808;">
-    <div class="footer-column" style="display: inline-block; width: 33%;">
-      <ul>
-      <li><a href="#">Tabela de Tarifas</a></li>
-      <li><a href="#">Concessionárias</a></li>
-      <li><a href="#">Canais de Atendimento</a></li>
-      <li><a href="#">Politíca de Cookies</a></li>
-      </ul>
-    </div>
-    <div class="footer-column" style="display: inline-block; width: 33%;">
-      <ul>
-        <li><a href="#">Custos Tributários</a></li>
-        <li><a href="#">Perguntas Frequentes</a></li>
-        <li><a href="#">Politica de Privacidade</a></li>
-      </ul>
-    </div>
-    <div class="footer-column" style="display: inline-block; width: 33%;">
-      <ul>
-        <li><a href="#">Golpes</a></li>
-        <li><a href="#">Formulários</a></li>
-        <li><a href="#">Redes Sociais</a></li>
-      </ul>
-    </div>
-    <div class="copy">
-      <span>&copy; 2024 Volkswagem Financial Services. Todos os direitos reservados.</span>
-    </div>
   </div>
-</footer> -->
-
-
-    <style>
-      @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-      @import url("https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css");
-      @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css");
-
-      * {
-        font-family: Arial, sans-serif;
-      }
-
-      .header {
-        width: 100%;
-        height: 20px;
-        padding-top: 30px;
-        padding-bottom: 50px;
-        position: fixed;
-        border: #D9D9D9;
-        border-bottom: 1px;
-        display: flex;
-        align-items: center;
-        background-color: #ffffff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-      }
-
-      .logo img {
-        height: 60px;
-        width: 100px;
-        margin-top: 30px;
-        margin-left: 30px;
-      }
-
-      .user-infoNomeSocial {
-        display: flex;
-        flex-direction: column;
-        width: 160px;
-        height: 60px;
-        margin-top: 43px;
-        font-size: 18px;
-        margin-right: 20px;
-      }
-
-      .user-info {
-        display: flex;
-        flex-direction: column;
-        width: 160px;
-        height: 60px;
-        margin-top: 43px;
-        font-size: 18px;
-        margin-left: 20px;
-      }
-
-      .greeting {
-        color: #095B73;
-      }
-
-      .label-selecione-contrato {
-        display: flex;
-        margin-left: 70px;
-        font-size: 15px;
-        width: 250px;
-        color: #095b73;
-        margin-top: 20px;
-
-      }
-
-      .form-select-contrato {
-        width: 186px;
-        justify-content: space-between;
-        margin-left: 70px;
-        border: none;
-        border-bottom: 1px solid #095b73;
-        font-size: 15px;
-      }
-
-      .user-ola {
-        display: flex;
-        flex-direction: column;
-        margin-left: 30px;
-        height: 37px;
-        width: 35px;
-        margin-top: 20px;
-        font-size: 18px;
-      }
-
-      .label {
-        font-size: 12px;
-        color: gray;
-      }
-
-      .labelNomeCivil {
-        font-size: 12px;
-        color: gray;
-      }
-
-      .greetingNomeCivil {
-        color: gray;
-        font-size: 18px;
-      }
-
-      .contract-selector select {
-        border: none;
-        font-size: 14px;
-      }
-
-      .vehicle-info {
-        width: 200px;
-        height: 19px;
-        font-size: 18px;
-        color: #095B73;
-        margin-left: 50px;
-      }
-
-      .btn-sair {
-        width: 200px;
-        height: 19px;
-        font-size: 18px;
-        color: #095B73;
-        margin-left: 50px;
-      }
-
-
-      .elemento-sair {
-        position: absolute;
-        right: 35px;
-        color: #095b73;
-        margin-top: 30px;
-      }
-
-      .logout {
-        height: 18px;
-        color: #003f5c;
-        font-size: 18px;
-      }
-
-      .sidebar {
-        position: fixed;
-        top: 80px;
-        width: 312px;
-        height: 800px;
-        background-color: #ffffff;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        padding: 25px;
-        font-size: 18px;
-        font-weight: bold;
-
-      }
-
-      .menu ul {
-        list-style: none;
-        padding: 0;
-        margin-left: 10px;
-      }
-
-      .menu-item {
-        margin-bottom: 30px;
-      }
-
-      .menu-item a {
-        text-decoration: none;
-        color: #095B73;
-        display: block;
-        margin-top: 30px;
-      }
-
-      .menu-item a:hover {
-        background-color: #f1f1f1;
-      }
-
-      .has-submenu .submenu {
-        display: none;
-        padding-left: 12px;
-        font-weight: normal;
-      }
-
-      .has-submenu:hover .submenu {
-        display: block;
-      }
-
-      .submenu a {
-        gap: 10px;
-      }
-
-      .bi-chevron-down {
-        float: right;
-      }
-
-      .main-content {
-        width: 61.5%;
-        height: 687px;
-        padding-top: 135px;
-        padding-right: 10px;
-        padding-left: 10px;
-        margin-left: 388px;
-        margin-right: 0;
-      }
 
 
 
-      .copy {
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
-        position: fixed;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
 
-      .div-grafico {
-        width: 100%;
-        height: 100%;
-      }
+  <style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css");
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css");
+
+    * {
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      width: 100%;
+      height: 20px;
+      padding-top: 30px;
+      padding-bottom: 50px;
+      position: fixed;
+      border: #D9D9D9;
+      border-bottom: 1px;
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 60px;
+      width: 100px;
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+
+    .user-infoNomeSocial {
+      display: flex;
+      flex-direction: column;
+      width: 160px;
+      height: 60px;
+      margin-top: 43px;
+      font-size: 18px;
+      margin-right: 20px;
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      width: 160px;
+      height: 60px;
+      margin-top: 43px;
+      font-size: 18px;
+      margin-left: 20px;
+    }
+
+    .greeting {
+      color: #095B73;
+    }
+
+    .label-selecione-contrato {
+      display: flex;
+      margin-left: 70px;
+      font-size: 15px;
+      width: 250px;
+      color: #095b73;
+      margin-top: 20px;
+
+    }
+
+    .form-select-contrato {
+      width: 186px;
+      justify-content: space-between;
+      margin-left: 70px;
+      border: none;
+      border-bottom: 1px solid #095b73;
+      font-size: 15px;
+    }
+
+    .user-ola {
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+      height: 37px;
+      width: 35px;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .label {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .labelNomeCivil {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .greetingNomeCivil {
+      color: gray;
+      font-size: 18px;
+    }
+
+    .contract-selector select {
+      border: none;
+      font-size: 14px;
+    }
+
+    .vehicle-info {
+      width: 200px;
+      height: 19px;
+      font-size: 18px;
+      color: #095B73;
+      margin-left: 50px;
+    }
+
+    .btn-sair {
+      width: 200px;
+      height: 19px;
+      font-size: 18px;
+      color: #095B73;
+      margin-left: 50px;
+    }
 
 
-      .contract-badge {
-        background-color: #0D485E;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 25px;
-        font-weight: bold;
-      }
+    .elemento-sair {
+      position: absolute;
+      right: 35px;
+      color: #095b73;
+      margin-top: 30px;
+    }
 
-      .progress-circle {
-        width: 120px;
-        height: 120px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        font-weight: bold;
-        /* color: #024059; */
-      }
+    .logout {
+      height: 18px;
+      color: #003f5c;
+      font-size: 18px;
+    }
 
-      .progress-circle svg {
-        transform: rotate(360deg);
-        /* Mantém a rotação */
-      }
+    .sidebar {
+      position: fixed;
+      top: 80px;
+      width: 312px;
+      height: 800px;
+      background-color: #ffffff;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      font-size: 18px;
+      font-weight: bold;
 
-      .progress-circle text {
-        fill: #095B73;
-        font-size: 1.2rem;
-        font-weight: bold;
-      }
+    }
 
-      th[sortable] {
-        cursor: pointer;
-        user-select: none;
-        -webkit-user-select: none;
-      }
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      margin-left: 10px;
+    }
 
-      th[sortable].desc:before,
-      th[sortable].asc:before {
-        content: '';
-        display: block;
-        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAmxJREFUeAHtmksrRVEUx72fH8CIGQNJkpGUUmakDEiZSJRIZsRQmCkTJRmZmJgQE0kpX0D5DJKJgff7v+ru2u3O3vvc67TOvsdatdrnnP1Y///v7HvvubdbUiIhBISAEBACQkAICAEhIAQ4CXSh2DnyDfmCPEG2Iv9F9MPlM/LHyAecdyMzHYNwR3fdNK/OH9HXl1UCozD24TCvILxizEDWIEzA0FcM8woCgRrJCoS5PIwrANQSMAJX1LEI9bqpQo4JYNFFKRSvIgsxHDVnqZgIkPnNBM0rIGtYk9YOOsqgbgepRCfdbmFtqhFkVEDVPjJp0+Z6e6hRHhqBKgg6ZDCvYBygVmUoEGoh5JTRvIJwhJo1aUOoh4CLPMyvxxi7EWOMgnCGsXXI1GIXlZUYX7ucU+kbR8NW8lh3O7cue0Pk32MKndfUxQFAwxdirk3fHappAnc0oqDPzDfGTBrCfHP04dM4oTV8cxr0SVzH9FF07xD3ib6xCDE+M+aUcVygtWzzbtGX2rPBrEUYfecfQkaFzYi6HjVnGBdtL7epqAlc1+jRdAap74RrnPc4BCijttY2tRcdN0g17w7HqZrXhdJTYAuS3hd8z+vKgK3V1zWPae0mZDMykadBn1hTQBLnZNwVrJpSe/NwEeDsEwCctEOsJTsgxLvCqUl2ACftEGvJDgjxrnBqkh3ASTvEWrIDQrwrnJpkB3DSDrGW7IAQ7wqnJtkBnLRztejXXVu4+mxz/nQ9jR1w5VB86ejLTFcnnDwhzV+F6T+CHZlx6THSjn76eyyBIOPHyDakhBAQAkJACAgBISAEhIAQYCLwC8JxpAmsEGt6AAAAAElFTkSuQmCC') no-repeat;
-        background-size: 22px;
-        width: 22px;
-        height: 22px;
-        float: left;
-        margin-left: -22px;
-      }
+    .menu-item {
+      margin-bottom: 30px;
+    }
 
-      th[sortable].desc:before {
-        transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-      }
+    .menu-item a {
+      text-decoration: none;
+      color: #095B73;
+      display: block;
+      margin-top: 30px;
+    }
 
-      /* Filtering table demo */
-      ngbd-table-filtering span.ngb-highlight {
-        background-color: yellow;
-      }
+    .menu-item a:hover {
+      background-color: #f1f1f1;
+    }
 
-      /* Complete table demo */
-      ngbd-table-complete span.ngb-highlight {
-        background-color: yellow;
-      }
+    .has-submenu .submenu {
+      display: none;
+      padding-left: 12px;
+      font-weight: normal;
+    }
 
-      ngb-carousel .picsum-img-wrapper {
-        position: relative;
-        height: 0;
-        padding-top: 55%;
-        /* Keep ratio for 900x500 images */
-      }
+    .has-submenu:hover .submenu {
+      display: block;
+    }
 
-      ngb-carousel .picsum-img-wrapper>img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-      }
-    </style>
+    .submenu a {
+      gap: 10px;
+    }
+
+    .bi-chevron-down {
+      float: right;
+    }
+
+    .main-content {
+      width: 61.5%;
+      height: 687px;
+      padding-top: 135px;
+      padding-right: 10px;
+      padding-left: 10px;
+      margin-left: 388px;
+      margin-right: 0;
+    }
+
+
+
+    .copy {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .div-grafico {
+      width: 100%;
+      height: 100%;
+    }
+
+
+    .contract-badge {
+      background-color: #0D485E;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .progress-circle {
+      width: 120px;
+      height: 120px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      /* color: #024059; */
+    }
+
+    .progress-circle svg {
+      transform: rotate(360deg);
+      /* Mantém a rotação */
+    }
+
+    .progress-circle text {
+      fill: #095B73;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    th[sortable] {
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+th[sortable].desc:before,
+th[sortable].asc:before {
+	content: '';
+	display: block;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAmxJREFUeAHtmksrRVEUx72fH8CIGQNJkpGUUmakDEiZSJRIZsRQmCkTJRmZmJgQE0kpX0D5DJKJgff7v+ru2u3O3vvc67TOvsdatdrnnP1Y///v7HvvubdbUiIhBISAEBACQkAICAEhIAQ4CXSh2DnyDfmCPEG2Iv9F9MPlM/LHyAecdyMzHYNwR3fdNK/OH9HXl1UCozD24TCvILxizEDWIEzA0FcM8woCgRrJCoS5PIwrANQSMAJX1LEI9bqpQo4JYNFFKRSvIgsxHDVnqZgIkPnNBM0rIGtYk9YOOsqgbgepRCfdbmFtqhFkVEDVPjJp0+Z6e6hRHhqBKgg6ZDCvYBygVmUoEGoh5JTRvIJwhJo1aUOoh4CLPMyvxxi7EWOMgnCGsXXI1GIXlZUYX7ucU+kbR8NW8lh3O7cue0Pk32MKndfUxQFAwxdirk3fHappAnc0oqDPzDfGTBrCfHP04dM4oTV8cxr0SVzH9FF07xD3ib6xCDE+M+aUcVygtWzzbtGX2rPBrEUYfecfQkaFzYi6HjVnGBdtL7epqAlc1+jRdAap74RrnPc4BCijttY2tRcdN0g17w7HqZrXhdJTYAuS3hd8z+vKgK3V1zWPae0mZDMykadBn1hTQBLnZNwVrJpSe/NwEeDsEwCctEOsJTsgxLvCqUl2ACftEGvJDgjxrnBqkh3ASTvEWrIDQrwrnJpkB3DSDrGW7IAQ7wqnJtkBnLRztejXXVu4+mxz/nQ9jR1w5VB86ejLTFcnnDwhzV+F6T+CHZlx6THSjn76eyyBIOPHyDakhBAQAkJACAgBISAEhIAQYCLwC8JxpAmsEGt6AAAAAElFTkSuQmCC')
+		no-repeat;
+	background-size: 22px;
+	width: 22px;
+	height: 22px;
+	float: left;
+	margin-left: -22px;
+}
+
+th[sortable].desc:before {
+	transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+}
+
+/* Filtering table demo */
+ngbd-table-filtering span.ngb-highlight {
+	background-color: yellow;
+}
+
+/* Complete table demo */
+ngbd-table-complete span.ngb-highlight {
+	background-color: yellow;
+}
+
+ngb-carousel .picsum-img-wrapper {
+	position: relative;
+	height: 0;
+	padding-top: 55%; /* Keep ratio for 900x500 images */
+}
+
+ngb-carousel .picsum-img-wrapper > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+  </style>
