@@ -1,6 +1,6 @@
 <!-- Header Section -->
 <header class="header">
-  <div class="logo" style="">
+  <div class="logo">
     <img src="https://www.basketball-loewen.de/wp-content/uploads/2022/12/VWFS_LOGO-980-e1671006285144.jpg">
   </div>
   <div class="user-ola">
@@ -97,53 +97,22 @@
 </aside>
 
 <div class="main-content">
-  
+  <div style="width: 100%; height:50%;">
+    <div style="display: flex; width: 100%; height: 10%;">
 
-    @if (images) {
-    <div style=" width:100%; height: 50%;">
-      <ngb-carousel>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[0]" alt="Random first slide" />
-          </div>
-          <div class="carousel-caption">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[1]" alt="Random second slide" />
-          </div>
-          <div class="carousel-caption">
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[2]" alt="Random third slide" />
-          </div>
-          <div class="carousel-caption">
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </div>
-        </ng-template>
-      </ngb-carousel>
     </div>
-    }
-
-  <div style="width: 100%; height: 46.5%; margin-top: 35px;">
+  </div>
+  <div style="width: 100%; height:100%; margin-top: 35px;">
     <div style="display: flex; width: 100%; height: 100%;">
 
       <!-- Grafico e Resumo do contrato -->
-      <div style="width: 50%; height: 100%; background-color: #F1F1F1; border-radius: 10px;">
+      <div style="width: 50%; height: 59.5%; background-color: #F1F1F1; border-radius: 10px;">
         <div
           style="width: 100%;height: 90px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
           <span style="font-weight: bold;">Contrato</span>
           <span class="contract-badge">001234567</span>
         </div>
-        <div style="width: 85%; height: 137px; border-radius: 4px; padding: 16px; gap: 8px; background-color: #ffffff; 
+        <div style="width: 85%; height: 170px; border-radius: 4px; padding: 16px; gap: 8px; background-color: #ffffff; 
             margin-left: auto;margin-right: auto;margin-top: auto;margin-bottom: auto;">
           <div style="display: flex; width: 100%; height: 100%;">
             <div style="width: 50%; height: 100%; display: flex; align-items: center; justify-content: center;">
@@ -171,14 +140,15 @@
               <div>
                 <div
                   style="display: flex; flex-direction: column; align-items: center; height: 100%; margin-bottom: 20px;">
-                  <span style="font-size: 14px;color: #444953;margin-bottom: 3px;">Saldo a pagar</span>
-                  <span style="font-size: 20px; font-weight: bold;">R$ 16651,36</span>
+                  <span style="font-size: 14px;color: #444953;margin-bottom: 3px;font-weight: bold;">Saldo a
+                    pagar</span>
+                  <span style="font-size: 16px; font-weight: bold;">R$ 16651,36</span>
                 </div>
                 <div
-                  style="display: flex; flex-direction: column; align-items: center; height: 100%;margin-bottom: 25px;">
+                  style="display: flex; flex-direction: column; align-items: center; height: 100%;margin-bottom: 10px;">
                   <span style="font-weight: bold; font-size: 14px; color: #444953;margin-bottom: 3px;">Valor da
                     parcela</span>
-                  <span style="font-weight: bold;font-size: 14px;">R$ 1.040,71</span>
+                  <span style="font-weight: bold;font-size: 16px;">R$ 1.040,71</span>
                 </div>
                 <div style="display: flex; flex-direction: column; align-items: center; height: 100%;">
                   <span style="font-weight: bold;font-size: 14px;text-decoration: underline;">
@@ -191,109 +161,65 @@
           </div>
         </div>
         <div
-          style="width: 100%;height: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          style="width: 100%;height: 73px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
           <span style="font-weight: bold;">Status do contrato</span>
           <span style="font-weight: bold; font-size: 10px;color: #3CBE00;">• EM DIA</span>
         </div>
       </div>
 
       <!-- Menu rapido -->
-      <div style="width: 50%; height: 100%; margin-left: 35px; color: #095B73;">
-        <div>
-          <span style="font-weight: bold; font-size: 20px;">Acesso rápido</span>
+      <div style="width: 50%; height: 58%; margin-left: 35px; color: #095B73;">
+        <span style="font-weight: bold; font-size: 20px;">Acesso rápido</span>
+
+        <!-- Card -->
+        <div style="width: 383px; height: 64px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          border-radius: 10px; display: flex; align-items: center; padding: 0 20px;
+          margin-top: 10px;">
+            <i class="bi bi-upc-scan" style="font-size: 32px; display: flex; align-items: center; justify-content: center;
+            margin-right: 10px;"></i>
+          <span style="font-weight: bold; font-size: 16px;"> 2ª via de boleto</span>
+          
+          <button style="background-color: #095b73; color: white; border: none; border-radius: 25px; padding: 5px 28px;
+          position: relative; left: 95px;">Abrir</button>
         </div>
-        <div>
-          <div style="width: 383px; height: 64px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 8px;
-          border-radius: 10px;">
 
-            <div style="width: 100%; height: 100%; display: flex; align-items: center;
-             margin-left: 20px;margin-right: 5px;">
+        <!-- Card -->
+        <div style="width: 383px; height: 64px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px; display: flex; align-items: center; padding: 0 20px;
+        margin-top: 10px;">
+          <i class="bi bi-file-earmark-pdf-fill" style="font-size: 32px; display: flex; align-items: center; justify-content: center;
+          margin-right: 10px;"></i>
+        <span style="font-weight: bold; font-size: 16px;">Cópia do contrato</span>
+        
+        <button style="background-color: #095b73; color: white; border: none; border-radius: 25px; padding: 5px 28px;
+        position: relative; left: 75px;">Abrir</button>
+      </div>
 
-              <div style="width:32px;height: 32px; margin-right: 10px;"><i class="bi bi-upc-scan"
-                  style="font-size: 32px;"></i></div>
-              <div style="width:218px;height: 16px;">
-                <span style="font-weight: bold; font-size: 16px"> 2ª via de boleto</span>
-              </div>
-              <div style="width: 77px;height: 30px;">
-                <button
-                  style="background-color: #095b73; color: white; border: none; border-radius: 25px; padding: 10px 28px;">
-                  Abrir
-                </button>
-              </div>
+      <!-- Card -->
+      <div style="width: 383px; height: 64px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px; display: flex; align-items: center; padding: 0 20px;
+      margin-top: 10px;">
+        <i class="bi bi-layout-text-sidebar" style="font-size: 32px; display: flex; align-items: center; justify-content: center;
+        margin-right: 10px;"></i>
+      <span style="font-weight: bold; font-size: 16px;">Extrato Consolidado</span>
+      
+      <button style="background-color: #095b73; color: white; border: none; border-radius: 25px; padding: 5px 28px;
+      position: relative; left: 55px">Abrir</button>
+    </div>
 
-            </div>
+    <!-- Card -->
+    <div style="width: 383px; height: 64px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; display: flex; align-items: center; padding: 0 20px;
+    margin-top: 10px;">
+      <i class="bi bi-person-vcard" style="font-size: 32px; display: flex; align-items: center; justify-content: center;
+      margin-right: 10px;"></i>
+    <span style="font-weight: bold; font-size: 16px;">Atualização cadastral</span>
+    
+    <button style="background-color: #095b73; color: white; border: none; border-radius: 25px; padding: 5px 28px;
+    position: relative; left: 48px;">Abrir</button>
+  </div>
 
-          </div>
-        </div>
-        <div>
-          <div style="width: 383px; height: 64px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 8px;
-          border-radius: 10px;">
-
-            <div style="width: 100%; height: 100%; display: flex; align-items: center;
-             margin-left: 20px;margin-right: 5px;">
-
-              <div style="width:32px;height: 32px; margin-right: 10px;"><i class="bi bi-file-earmark-pdf-fill"
-                  style="font-size: 32px;"></i></div>
-              <div style="width:218px;height: 16px;">
-                <span style="font-weight: bold; font-size: 16px"> Cópia do contrato</span>
-              </div>
-              <div style="width: 77px;height: 30px;">
-                <button
-                  style="background-color: #095b73; color: white; border: none; border-radius: 25px; padding: 10px 28px;">
-                  Abrir
-                </button>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-        <div>
-          <div style="width: 383px; height: 64px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 8px;
-          border-radius: 10px;">
-
-            <div style="width: 100%; height: 100%; display: flex; align-items: center;
-             margin-left: 20px;margin-right: 5px;">
-
-              <div style="width:32px;height: 32px; margin-right: 10px;"><i class="bi bi-layout-text-sidebar"
-                  style="font-size: 32px;"></i></div>
-              <div style="width:218px;height: 16px;">
-                <span style="font-weight: bold; font-size: 16px"> Extrato consolidado</span>
-              </div>
-              <div style="width: 77px;height: 30px;">
-                <button
-                  style="background-color: #095b73; color: white; border: none; border-radius: 25px; padding: 10px 28px;">
-                  Abrir
-                </button>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-        <div>
-          <div style="width: 383px; height: 64px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 8px;
-          border-radius: 10px;">
-
-            <div style="width: 100%; height: 100%; display: flex; align-items: center;
-             margin-left: 20px;margin-right: 5px;">
-
-              <div style="width:32px;height: 32px; margin-right: 10px;"><i class="bi bi-person-vcard"
-                  style="font-size: 32px;"></i></div>
-              <div style="width:218px;height: 16px;">
-                <span style="font-weight: bold; font-size: 16px"> Atualização cadastral</span>
-              </div>
-              <div style="width: 77px;height: 30px;">
-                <button
-                  style="background-color: #095b73; color: white; border: none; border-radius: 25px; padding: 10px 28px;">
-                  Abrir
-                </button>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
+      
 
       </div>
     </div>
@@ -313,9 +239,7 @@
 
     .header {
       width: 100%;
-      height: 20px;
-      padding-top: 30px;
-      padding-bottom: 50px;
+      height: 100px;
       position: fixed;
       border: #D9D9D9;
       border-bottom: 1px;
@@ -548,52 +472,4 @@
       font-size: 1.2rem;
       font-weight: bold;
     }
-
-    th[sortable] {
-	cursor: pointer;
-	user-select: none;
-	-webkit-user-select: none;
-}
-
-th[sortable].desc:before,
-th[sortable].asc:before {
-	content: '';
-	display: block;
-	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAmxJREFUeAHtmksrRVEUx72fH8CIGQNJkpGUUmakDEiZSJRIZsRQmCkTJRmZmJgQE0kpX0D5DJKJgff7v+ru2u3O3vvc67TOvsdatdrnnP1Y///v7HvvubdbUiIhBISAEBACQkAICAEhIAQ4CXSh2DnyDfmCPEG2Iv9F9MPlM/LHyAecdyMzHYNwR3fdNK/OH9HXl1UCozD24TCvILxizEDWIEzA0FcM8woCgRrJCoS5PIwrANQSMAJX1LEI9bqpQo4JYNFFKRSvIgsxHDVnqZgIkPnNBM0rIGtYk9YOOsqgbgepRCfdbmFtqhFkVEDVPjJp0+Z6e6hRHhqBKgg6ZDCvYBygVmUoEGoh5JTRvIJwhJo1aUOoh4CLPMyvxxi7EWOMgnCGsXXI1GIXlZUYX7ucU+kbR8NW8lh3O7cue0Pk32MKndfUxQFAwxdirk3fHappAnc0oqDPzDfGTBrCfHP04dM4oTV8cxr0SVzH9FF07xD3ib6xCDE+M+aUcVygtWzzbtGX2rPBrEUYfecfQkaFzYi6HjVnGBdtL7epqAlc1+jRdAap74RrnPc4BCijttY2tRcdN0g17w7HqZrXhdJTYAuS3hd8z+vKgK3V1zWPae0mZDMykadBn1hTQBLnZNwVrJpSe/NwEeDsEwCctEOsJTsgxLvCqUl2ACftEGvJDgjxrnBqkh3ASTvEWrIDQrwrnJpkB3DSDrGW7IAQ7wqnJtkBnLRztejXXVu4+mxz/nQ9jR1w5VB86ejLTFcnnDwhzV+F6T+CHZlx6THSjn76eyyBIOPHyDakhBAQAkJACAgBISAEhIAQYCLwC8JxpAmsEGt6AAAAAElFTkSuQmCC')
-		no-repeat;
-	background-size: 22px;
-	width: 22px;
-	height: 22px;
-	float: left;
-	margin-left: -22px;
-}
-
-th[sortable].desc:before {
-	transform: rotate(180deg);
-	-ms-transform: rotate(180deg);
-}
-
-/* Filtering table demo */
-ngbd-table-filtering span.ngb-highlight {
-	background-color: yellow;
-}
-
-/* Complete table demo */
-ngbd-table-complete span.ngb-highlight {
-	background-color: yellow;
-}
-
-ngb-carousel .picsum-img-wrapper {
-	position: relative;
-	height: 0;
-	padding-top: 55%; /* Keep ratio for 900x500 images */
-}
-
-ngb-carousel .picsum-img-wrapper > img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-}
   </style>
