@@ -94,10 +94,37 @@
 </aside>
 
 <div class="main-content">
-  <div style="width: 100%; height:50%;">
-    <div style="display: flex; width: 100%; height: 10%;">
-
-    </div>
+  <div>
+   <ngb-carousel style="width: 100%; height: 100%;">
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper" style="width: 100%; height: 100%;">
+              <img [src]="images[0]" alt="Random first slide" style="width: 100%; height: 100%;" />
+            </div>
+            <div class="carousel-caption">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper" style="width: 100%; height: 100%;">
+              <img [src]="images[1]" alt="Random second slide" style="width: 100%; height: 100%;" />
+            </div>
+            <div class="carousel-caption">
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper" style="width: 100%; height: 100%;">
+              <img [src]="images[2]" alt="Random third slide" style="width: 100%; height: 100%;" />
+            </div>
+            <div class="carousel-caption">
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </ng-template>
+    </ngb-carousel>
+     
   </div>
   <div style="width: 100%; height:100%; margin-top: 35px;">
     <div style="display: flex; width: 100%; height: 100%;">
@@ -425,34 +452,6 @@
     }
 
 
-    .contract-badge {
-      background-color: #0D485E;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 25px;
-      font-weight: bold;
-    }
+    
 
-    .progress-circle {
-      width: 120px;
-      height: 120px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      font-weight: bold;
-      /* color: #024059; */
-    }
-
-    .progress-circle svg {
-      transform: rotate(360deg);
-      /* Mantém a rotação */
-    }
-
-    .progress-circle text {
-      fill: #095B73;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
   </style>
