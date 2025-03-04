@@ -41,7 +41,7 @@
                 <span style="font-size: 14px;color: #444953;margin-bottom: 3px; font-weight: bold;">Saldo a pagar</span>
                 <span style="font-size: 16px; font-weight: bold;">
                   <span *ngIf="showSaldo">R$ 16651,36</span>
-                  <span *ngIf="!showSaldo">****</span>
+                  <span *ngIf="!showSaldo">R$ ****</span>
                   <i class="bi" [ngClass]="showSaldo ? 'bi-eye-slash' : 'bi-eye'" (click)="toggleSaldo()" style="margin-left: 10px; font-size: 20px; cursor: pointer;"></i>
                 </span>
               </div>
@@ -49,7 +49,7 @@
                 <span style="font-weight: bold; font-size: 14px; color: #444953;margin-bottom: 3px;">Valor da parcela</span>
                 <span style="font-weight: bold;font-size: 16px;">
                   <span *ngIf="showSaldo">R$ 1.040,71</span>
-                  <span *ngIf="!showSaldo">****</span>
+                  <span *ngIf="!showSaldo">R$ ****</span>
                   <i class="bi" [ngClass]="showSaldo ? 'bi-eye-slash' : 'bi-eye'" (click)="toggleSaldo()" style="margin-left: 10px; font-size: 20px; cursor: pointer;"></i>
                 </span>
               </div>
