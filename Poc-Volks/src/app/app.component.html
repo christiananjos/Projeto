@@ -1,65 +1,7 @@
 <!-- Header Section -->
 <app-header></app-header>
 
-<aside class="sidebar">
-  <nav class="menu">
-    <ul>
-
-      <li class="menu-item has-submenu">
-        <a>
-          <i class="bi bi-person-circle"></i> Área Pessoal<i class="bi bi-chevron-down"></i>
-        </a>
-        <ul class="submenu">
-          <li><a href="#">Dados Cadastrais</a></li>
-          <li><a href="#">Senha</a></li>
-          <li><a href="#">Preferências</a></li>
-        </ul>
-      </li>
-      <hr>
-      <li class="menu-item has-submenu">
-        <a><i class="bi bi-shield-check"></i> Seguros e Serviços<i class="bi bi-chevron-down"></i></a>
-        <ul class="submenu">
-          <li><a href="#">Acidentes Pessoais</a></li>
-          <li><a href="#">Casco</a></li>
-          <li><a href="#">Acidentes Pessoais</a></li>
-          <li><a href="#">GAP</a></li>
-          <li><a href="#">Garantia Estendida</a></li>
-          <li><a href="#">Proteção Financeira</a></li>
-          <li><a href="#">Revisão Planejada</a></li>
-          <li><a href="#">Seguro Franquia</a></li>
-          <li><a href="#">Vw Protege</a></li>
-        </ul>
-      </li>
-      <hr>
-      <li class="menu-item has-submenu">
-        <a><i class="bi bi-receipt-cutoff"></i> Dados do Contrato<i class="bi bi-chevron-down"></i></a>
-        <ul class="submenu">
-          <li><a href="#">Cópia do Contrato</a></li>
-          <li><a href="#">Informações do contrato</a></li>
-          <li><a href="#">Meus contratos</a></li>
-          <li><a href="#">Laudo veícular</a></li>
-        </ul>
-      </li>
-      <hr>
-      <li class="menu-item has-submenu">
-        <a><i class="bi bi-upc-scan"></i> Financeiro<i class="bi bi-chevron-down"></i></a>
-        <ul class="submenu">
-          <li><a href="#">2ª via de boleto</a></li>
-          <li><a href="#">2ª via de carnê</a></li>
-          <li><a href="#">Antecipar parcelas</a></li>
-          <li><a href="#">Liquidar Contrato</a></li>
-          <li><a href="#">Extrato consolidado</a></li>
-          <li><a href="#">Extrato do contrato</a></li>
-          <li><a href="#">Declaração de quitação anual</a></li>
-        </ul>
-      </li>
-      <hr>
-      <li class="menu-item">
-        <a href="#"><i class="bi bi-patch-check"></i> Validador de Boletos </a>
-      </li>
-    </ul>
-  </nav>
-</aside>
+<app-sidebar></app-sidebar>
 
 <div class="main-content">
   <div style="width: 85%; height: 50%;">
@@ -198,53 +140,7 @@
   }
 
  
-  .sidebar {
-    position: fixed;
-    top: 80px;
-    width: 312px;
-    height: 100%;
-    background-color: #ffffff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    font-size: 18px;
-    font-weight: bold;
-
-  }
-
-  .menu ul {
-    list-style: none;
-    padding: 0;
-    margin-left: 10px;
-  }
-
-  .menu-item {
-    margin-bottom: 10px;
-  }
-
-  .menu-item a {
-    text-decoration: none;
-    display: block;
-    margin-top: 30px;
-  }
-
-  .menu-item a:hover {
-    background-color: #f1f1f1;
-  }
-
-  .has-submenu .submenu {
-    display: none;
-    padding-left: 12px;
-    font-weight: normal;
-  }
-
-  .has-submenu:hover .submenu {
-    display: block;
-  }
-
-  .bi-chevron-down {
-    float: right;
-  }
-
+ 
   .main-content {
     width: 61.5%;
     height: 687px;
