@@ -1,0 +1,112 @@
+.header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    border: #D9D9D9;
+    border-bottom: 1px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .logo img {
+    height: 60px;
+    width: 100px;
+    margin-left: 30px;
+  }
+
+  .user-infoNomeSocial {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height: 60px;
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+
+  .label-selecione-contrato {
+    display: flex;
+    margin-left: 70px;
+    font-size: 15px;
+    width: 250px;
+    font-weight: bold;
+
+  }
+
+  .form-select-contrato {
+    width: 186px;
+    justify-content: space-between;
+    margin-left: 70px;
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 15px;
+  }
+
+  .user-ola {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    height: 37px;
+    width: 35px;
+    font-size: 18px;
+  }
+
+  .label {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .labelNomeCivil {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .greetingNomeCivil {
+    color: gray;
+    font-size: 18px;
+  }
+
+  .contract-selector select {
+    border: none;
+    font-size: 14px;
+  }
+
+  .vehicle-info {
+    width: 200px;
+    height: 19px;
+    font-size: 18px;
+    margin-left: 50px;
+  }
+
+  .btn-sair {
+    width: 200px;
+    height: 19px;
+    font-size: 18px;
+    margin-left: 50px;
+  }
+
+
+  .elemento-sair {
+    position: absolute;
+    right: 35px;
+  }
+
+  .logout {
+    height: 18px;
+    font-size: 18px;
+  }
