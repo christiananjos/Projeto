@@ -10,9 +10,10 @@ export class AppComponent {
   title = 'Poc-Volks'
 
   showSaldo = true;
+  showEmAtraso = true;
 
   toggleSaldo() {
     this.showSaldo = !this.showSaldo;
   }
-  
+
 }
