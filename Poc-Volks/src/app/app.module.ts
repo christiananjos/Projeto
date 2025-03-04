@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { CarouselBaseComponent } from './carousel-base/carousel-base.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarouselBaseComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    NgbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
