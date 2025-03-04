@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Poc-Volks'
+
+  showSaldo = true;
+
+  toggleSaldo() {
+    this.showSaldo = !this.showSaldo;
+  }
+  
 }
