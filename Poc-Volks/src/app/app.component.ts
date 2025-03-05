@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export default class AppComponent {
   showSaldo = true;
-  showEmAtraso = false;
+  showEmAtraso = true;
   txtEmAtraso: string = '';
 
   toggleSaldo() {
@@ -34,9 +34,14 @@ export default class AppComponent {
   }
 
   changeFontColorToRed() {
+    const iconElement = document.getElementById('iconeStatusPagamento');
+    if (iconElement) {
+      iconElement.style.color = 'red';
+    }
     const element = document.getElementById('statusContrato');
     if (element) {
       element.style.color = 'red';
+
     }
   }
 
