@@ -7,13 +7,15 @@ import { CarouselBaseComponent } from './carousel-base/carousel-base.component';
 import { FooterBaseComponent } from './footer-base/footer-base.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { MainContentComponent } from './main-content/main-content.component';
 @NgModule({
   declarations: [
     AppComponent,
     CarouselBaseComponent,
     FooterBaseComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,
