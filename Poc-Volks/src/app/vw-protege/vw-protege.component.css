@@ -20,7 +20,7 @@
     gap: 40px;
     background-color: #f1f1f1;
     align-content: center;
-    padding: 20px;
+    padding: 40px;
     padding-top: 100px;
 }
 
@@ -28,4 +28,10 @@
     font-size: 28px;
     font-weight: bold;
     
+}
+
+.imgVwProtege {
+    width: 299px;
+    height: 156px;
+    /* padding-top: 100px; */
 }
