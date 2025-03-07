@@ -1,6 +1,6 @@
 * {
     font-family: Arial, sans-serif;
-    color: #095b73;
+    /* color: #095b73; */
     font-size: 16px;
 }
 
@@ -43,15 +43,29 @@
     height: 268px;
     padding-right: 350px;
     padding-left: 40px;
-
+    color: #444953;
 }
 
 .box {
-    width: 358px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     font-size: 20px;
-    color: white;
+    /* color:#444953; */
+}
+
+.spanTitulo {
+    font-size: 12px;
+}
+
+.spanTitulo {
+    font-size: 12px;
+}
+.spanDescricao{
+    font-size: 16px;
+}
+
+.dadosSeguro {
+    margin-top: 50px;
 }
