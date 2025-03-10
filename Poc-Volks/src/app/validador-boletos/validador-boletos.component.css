@@ -77,3 +77,9 @@
     display: flex;
     justify-content: flex-start;
   }
+
+input#barcodeInput {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
