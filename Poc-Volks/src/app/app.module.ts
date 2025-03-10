@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { VwProtegeComponent } from './vw-protege/vw-protege.component';
+import { ValidadorBoletosComponent } from './validador-boletos/validador-boletos.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { VwProtegeComponent } from './vw-protege/vw-protege.component';
     SidebarComponent,
     MainContentComponent,
     VwProtegeComponent,
+    ValidadorBoletosComponent,
   ],
   imports: [
     BrowserModule,
