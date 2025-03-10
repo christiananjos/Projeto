@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ValidadorBoletosComponent {
 
+  barcode: string = '';
+
+  onBarcodeInput(event: any): void {
+    const input = event.target.value.replace(/\D/g, '');
+    this.barcode = input;
+  }
 }
