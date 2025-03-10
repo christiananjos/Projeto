@@ -5,7 +5,7 @@
 }
 
 .main-content {
-    width: 100%;
+    width: 83.4%;
     height: 500px;
     padding-top: 100px;
     padding-right: 10px;
@@ -69,3 +69,18 @@
 .dadosSeguro {
     margin-top: 50px;
 }
+
+.container .row {
+    display: flex;
+    align-items: center;
+  }
+
+  .container .col:first-child {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .container .col:last-child {
+    display: flex;
+    justify-content: flex-end;
+  }
