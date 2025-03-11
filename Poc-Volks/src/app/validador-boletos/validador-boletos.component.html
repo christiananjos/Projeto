@@ -8,10 +8,11 @@
             efetue seu pagamento com segurança.
         </h1>
         <div style="margin-top: 50px;">
-            <label for="barcodeInput" style="color: #095b73; font-weight: bold; font-size: 12px;">Código de barras</label>
-            <input type="text" class="form-control" id="barcodeInput" aria-describedby="barcodeHelp" 
-            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 48)"
-            placeholder="00000.00000 00000.000000 00000.000000 0 00000000000000" style="border-color: #7c7c7c">
+            <label for="barcodeInput" style="color: #095b73; font-weight: bold; font-size: 12px;">Código de
+                barras</label>
+            <input type="text" class="form-control" id="barcodeInput" aria-describedby="barcodeHelp"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 48)"
+                placeholder="00000.00000 00000.000000 00000.000000 0 00000000000000" style="border-color: #7c7c7c">
 
         </div>
 
@@ -32,30 +33,41 @@
 <div class="modal fade" id="boletoModal" tabindex="-1" aria-labelledby="boletoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
             <div class="modal-body">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                
                 <div class="divTituloModal">
-                    <div>
                     <i class="bi bi-patch-check" style="font-size: 60px;"></i>
-                    </div>
-                    <h5 class="modal-title" id="boletoModalLabel" style="color: #095b73; font-weight: bold; font-size: 22px;">
+                    <h5 class="modal-title" id="boletoModalLabel"
+                        style="font-weight: bold; font-size: 22px;">
                         O código de barras informado é válido!
                     </h5>
                 </div>
 
-                <div>
+
+                <div class="informacoesModal">
                     <p>Informações do boleto consultado:</p>
                     <p><strong>Valor:</strong> R$ 1.329,90</p>
                     <p><strong>Vencimento:</strong> 15/12/2024</p>
                     <p><strong>Nome do beneficiário:</strong> BANCO VOLKSWAGEN S.A</p>
-                    <p><strong>Código de barras consultado:</strong>23792374039043769259401011189501799600000136036</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Realizar nova consulta</button>
+                    <p><strong>Código de barras consultado:</strong>23792374039043769259401011189501799600000136036
+                        <button id="codigoBarras" onclick="copyToClipboard('23792374039043769259401011189501799600000136036')" style="border: none; background: none;">
+                            <i class="bi bi-copy" onclick="copyToClipboard('23792374039043769259401011189501799600000136036')"></i>
+                        </button>
+                    </p>
+
+                    <div class="botoes">
+                        <button type="button" data-bs-dismiss="modal" class="btn btn-outline-secondary"
+                            style="border-radius: 20px; margin-right: 20px;">
+                            Fechar
+                        </button>
+                        <button type="button" data-bs-dismiss="modal" class="btn btn-primary"
+                            style="border-radius: 20px; background-color: #095b73; border-color: #095b73;">
+                            Realizar nova consulta
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
