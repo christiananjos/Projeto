@@ -37,15 +37,22 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                     style="float: right;"></button>
 
-                <div class="divTituloModal">
+                    
+                <div class="divTituloModal" *ngIf="codigoBarrasValido">
                     <i class="bi bi-patch-check" style="font-size: 60px;"></i>
                     <h5 class="modal-title" id="boletoModalLabel" style="font-weight: bold; font-size: 22px;">
                         O código de barras informado é válido!
                     </h5>
                 </div>
 
-
-                <div class="informacoesModal">
+                <div class="divTituloModal" *ngIf="!codigoBarrasValido">
+                    <i class="bi bi-patch-exclamation" style="font-size: 60px;"></i>
+                    <h5 class="modal-title" id="boletoModalLabel" style="font-weight: bold; font-size: 22px;">
+                        Código de barras inválido
+                    </h5>
+                </div>
+                 
+                <div class="informacoesModal" *ngIf="codigoBarrasValido">
                     <p>Informações do boleto consultado:</p>
                     <p><strong>Valor:</strong> {{valor}}</p>
                     <p><strong>Vencimento:</strong> {{vencimento}}</p>
@@ -53,17 +60,22 @@
                     <p><strong>Código de barras consultado:</strong> {{codigoBarraboleto}}
                         <button (click)="copyToClipboard()" class="btn btn-link"><i class="bi bi-copy"></i></button>
                     </p>
+                </div>
 
-                    <div class="botoes">
-                        <button type="button" data-bs-dismiss="modal" class="btn btn-outline-secondary"
-                            style="border-radius: 20px; margin-right: 20px;">
-                            Fechar
-                        </button>
-                        <button type="button" data-bs-dismiss="modal" class="btn btn-primary"
-                            style="border-radius: 20px; background-color: #095b73; border-color: #095b73;">
-                            Realizar nova consulta
-                        </button>
-                    </div>
+                <div class="informacoesModal" *ngIf="!codigoBarrasValido" style="margin-bottom: 50px;">
+                    <p style="text-align: center;">{{mensagemErroBoleto}}</p>
+                </div>
+
+
+                <div class="botoes">
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-outline-secondary"
+                        style="border-radius: 20px; margin-right: 20px;">
+                        Fechar
+                    </button>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-primary"
+                        style="border-radius: 20px; background-color: #095b73; border-color: #095b73;">
+                        Realizar nova consulta
+                    </button>
                 </div>
             </div>
         </div>

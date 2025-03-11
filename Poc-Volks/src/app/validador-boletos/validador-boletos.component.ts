@@ -15,6 +15,12 @@ export class ValidadorBoletosComponent {
   nomeBeneficiario: string = 'BANCO VOLKSWAGEN S.A';
   codigoBarraboleto: string = '23792374039043769259401011189501799600000136036';
 
+  codigoBarrasValido: boolean = true;
+
+  mensagemErroBoleto: string = 'O código de barras informmado é inválido, apresenta irregularidades ou não foi emitido pela Volkswagen S.A. Por favor, verifique as informações e tente novamente.';
+
+  
+
   onBarcodeInput(event: any): void {
     const input = event.target.value.replace(/\D/g, '');
     this.barcode = input;
