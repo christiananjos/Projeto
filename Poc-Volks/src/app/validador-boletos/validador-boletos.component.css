@@ -72,3 +72,13 @@ input#barcodeInput {
     border-right: none;
     border-top: none;
 }
+
+.divTituloModal {
+    width: 700px;
+    height: 91px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
