@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class MainContentComponent {
 
   showSaldo = true;
-  showEmAtraso = true;
+  showEmAtraso = false;
   txtEmAtraso: string = '';
 
   toggleSaldo() {
