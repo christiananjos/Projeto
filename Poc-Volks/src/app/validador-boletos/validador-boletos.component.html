@@ -34,12 +34,12 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-body">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="float: right;"></button>
-                
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    style="float: right;"></button>
+
                 <div class="divTituloModal">
                     <i class="bi bi-patch-check" style="font-size: 60px;"></i>
-                    <h5 class="modal-title" id="boletoModalLabel"
-                        style="font-weight: bold; font-size: 22px;">
+                    <h5 class="modal-title" id="boletoModalLabel" style="font-weight: bold; font-size: 22px;">
                         O código de barras informado é válido!
                     </h5>
                 </div>
@@ -47,13 +47,11 @@
 
                 <div class="informacoesModal">
                     <p>Informações do boleto consultado:</p>
-                    <p><strong>Valor:</strong> R$ 1.329,90</p>
-                    <p><strong>Vencimento:</strong> 15/12/2024</p>
-                    <p><strong>Nome do beneficiário:</strong> BANCO VOLKSWAGEN S.A</p>
-                    <p><strong>Código de barras consultado:</strong>23792374039043769259401011189501799600000136036
-                        <button id="codigoBarras" onclick="copyToClipboard('23792374039043769259401011189501799600000136036')" style="border: none; background: none;">
-                            <i class="bi bi-copy" onclick="copyToClipboard('23792374039043769259401011189501799600000136036')"></i>
-                        </button>
+                    <p><strong>Valor:</strong> {{valor}}</p>
+                    <p><strong>Vencimento:</strong> {{vencimento}}</p>
+                    <p><strong>Nome do beneficiário:</strong> {{nomeBeneficiario}}</p>
+                    <p><strong>Código de barras consultado:</strong> {{codigoBarraboleto}}
+                        <button (click)="copyToClipboard()" class="btn btn-link"><i class="bi bi-copy"></i></button>
                     </p>
 
                     <div class="botoes">
