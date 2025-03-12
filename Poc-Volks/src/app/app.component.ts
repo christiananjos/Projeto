@@ -9,19 +9,36 @@ import { Component, Renderer2 } from '@angular/core';
 export default class AppComponent {
   constructor(private renderer: Renderer2) {}
 
-  alterarEstiloETexto(componente: string): void {
-    switch (componente) {
-      case 'header':
+
+flagEmpresa: string = 'volks';
+
+// Método para alterar o css, texto e imagens de acordo com a empresa
+//1 - Alterar a cor da fonte geral, cor do footer
+//2 - Alterar as imagens do carousel para cada marca
+//3 - Alterar texto submenu Seguros e Serviços > Vw Protege / Porsche Protege / Carbank Protege
+ //3.1 Alterar o texto do cabeçalho para cada marca.
+ //3.2 Alterar a imagem do cabeçalho para cada marca.
+//4 - Alterar o modal do validador de boletos com o beficiário de acordo com a marca (valido e invalido)
+
+  alterarEstiloETexto(flagEmpresa: string): void {
+    switch (flagEmpresa) {
+      case 'volks':
         this.alterarHeader();
-        break;
-      case 'sidebar':
         this.alterarSidebar();
+        this.alterarFooter();
         break;
-      case 'footer':
+      case 'cb':
+        this.alterarHeader();
+        this.alterarSidebar();
+        this.alterarFooter();
+        break;
+      case 'porsche':
+        this.alterarHeader();
+        this.alterarSidebar();
         this.alterarFooter();
         break;
       default:
-        console.warn('Componente não reconhecido');
+        console.warn('Empresa não encontrada');
     }
   }
 
