@@ -12,7 +12,7 @@ export default class AppComponent {
 
 flagEmpresa: string = 'volks';
 
-// Método para alterar o css, texto e imagens de acordo com a empresa
+
 //1 - Alterar a cor da fonte geral, cor do footer
 //2 - Alterar as imagens do carousel para cada marca
 //3 - Alterar texto submenu Seguros e Serviços > Vw Protege / Porsche Protege / Carbank Protege
@@ -23,24 +23,24 @@ flagEmpresa: string = 'volks';
   alterarEstiloETexto(flagEmpresa: string): void {
     switch (flagEmpresa) {
       case 'volks':
-        this.alterarHeader();
-        this.alterarSidebar();
-        this.alterarFooter();
-        break;
-      case 'cb':
-        this.alterarHeader();
-        this.alterarSidebar();
-        this.alterarFooter();
+        this.alterarParaVolks();
         break;
       case 'porsche':
-        this.alterarHeader();
-        this.alterarSidebar();
-        this.alterarFooter();
+        this.alterarParaPorsche();
+        break;
+      case 'carbank':
+        this.alterarParaCarbank();
         break;
       default:
         console.warn('Empresa não encontrada');
     }
   }
+
+
+  private alterarParaVolks(): void {}
+  private alterarParaPorsche(): void {}
+  private alterarParaCarbank(): void {}
+
 
   private alterarHeader(): void {
     const header = document.querySelector('app-header');
