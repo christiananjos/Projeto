@@ -34,43 +34,44 @@ export default class AppComponent {
 
   private alterarParaVolks(): void {
 
-    // this.alteraCorFonte();
+    this.alterarHeader('https://www.basketball-loewen.de/wp-content/uploads/2022/12/VWFS_LOGO-980-e1671006285144.jpg', '#095b73');
     this.alterarFooter('#095b73');
-    // this.alteraImagensCarousel();
-    // this.alteraTextoSubmenuProtege();
-    // this.alteraTextoBeneficiarioValidorBoletos();
+    
 
   }
   private alterarParaPorsche(): void {
 
-    this.alterarHeader('https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-0.png');
+    this.alterarHeader('https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-0.png', '#000000');
     this.alterarFooter('#403F44');
-    // this.alteraImagensCarousel();
-    // this.alteraTextoSubmenuProtege();
-    // this.alteraTextoBeneficiarioValidorBoletos();
+   
   }
 
   private alterarParaCarbank(): void {
-    this.alterarHeader('https://cdn.bancovw.com.br/cdn/whitelabel/whl6100000/logoCarBankTransp.png');
+    this.alterarHeader('https://cdn.bancovw.com.br/cdn/whitelabel/whl6100000/logoCarBankTransp.png', '#00984A');
     this.alterarFooter('#00984A');
-    this.alteraCorFonte();
-
-    this.alteraImagensCarousel();
-    this.alteraTextoSubmenuProtege();
-    this.alteraTextoBeneficiarioValidorBoletos();
   }
 
-  private alterarHeader(imgSource: string): void {
+  private alterarHeader(imgSource: string, rgbCorFonte: string): void {
     const header = document.querySelector('app-header');
+
     if (header) {
+      
       const imgLogo = header.querySelector('#imgLogo');
       if (imgLogo) {
-        console.log(imgLogo);
-        console.log(imgSource);
         this.renderer.setAttribute(imgLogo, 'src', imgSource);
       }
-      // this.renderer.setStyle(header, 'background-color', 'blue');
-      // this.renderer.setProperty(header, 'innerText', 'Novo Texto do Header');
+      const headerFull = header.querySelector('.header');
+      if (headerFull) {
+        this.renderer.setStyle(headerFull, 'color', rgbCorFonte);
+      }
+    // const styleElement = document.createElement('style');
+    // styleElement.innerHTML = `
+    //   * {
+    //     font-family: Arial, sans-serif;
+    //     color: ${rgbCorFonte}
+    //   }`;
+
+    // this.renderer.appendChild(header, styleElement);
     }
   }
 
