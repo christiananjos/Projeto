@@ -12,10 +12,10 @@ export default class AppComponent {
   flagEmpresa: string = 'carbank';
 
   ngOnInit() {
-    this.alterarEstiloETexto(this.flagEmpresa);
+    this.marcas(this.flagEmpresa);
   }
 
-  alterarEstiloETexto(flagEmpresa: string): void {
+  marcas(flagEmpresa: string): void {
     switch (flagEmpresa) {
       case 'volks':
         this.volks();
@@ -28,57 +28,68 @@ export default class AppComponent {
         break;
       default:
         this.volks();
-        console.warn('Empresa não encontrada');
     }
   }
 
 
   private volks(): void {
+    this.alteraCorFonte('#095b73');
+    this.alteraLogoHeader('https://www.basketball-loewen.de/wp-content/uploads/2022/12/VWFS_LOGO-980-e1671006285144.jpg');
+    this.alteraBackgroundColorFooter('#095b73');
+    this.alteraCorFonte('#095b73')
 
-    this.alterarHeader('https://www.basketball-loewen.de/wp-content/uploads/2022/12/VWFS_LOGO-980-e1671006285144.jpg', '#095b73');
-    this.alterarFooter('#095b73');
-    
 
   }
   private porsche(): void {
+    this.alteraCorFonte('#000000');
+    this.alteraLogoHeader('https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-0.png');
+    this.alteraBackgroundColorFooter('#403F44');
+    this.alteraCorFonte('#403F44')
 
-    this.alterarHeader('https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-0.png', '#000000');
-    this.alterarFooter('#403F44');
-   
   }
 
   private carbank(): void {
-    this.alterarHeader('https://cdn.bancovw.com.br/cdn/whitelabel/whl6100000/logoCarBankTransp.png', '#00984A');
-    this.alterarFooter('#00984A');
+    this.alteraCorFonte('#00984A');
+    this.alteraLogoHeader('https://cdn.bancovw.com.br/cdn/whitelabel/whl6100000/logoCarBankTransp.png');
+    this.alteraBackgroundColorFooter('#00984A');
+    this.alteraCorFonte('#00984A')
   }
 
-  private alterarHeader(imgSource: string, rgbCorFonte: string): void {
+  private alteraLogoHeader(imgSource: string): void {
     const header = document.querySelector('app-header');
 
     if (header) {
-      
+
       const imgLogo = header.querySelector('#imgLogo');
       if (imgLogo) {
         this.renderer.setAttribute(imgLogo, 'src', imgSource);
       }
-      const headerFull = header.querySelector('.header');
-      if (headerFull) {
-        this.renderer.setStyle(headerFull, 'color', rgbCorFonte);
-      }
-    // const styleElement = document.createElement('style');
-    // styleElement.innerHTML = `
-    //   * {
-    //     font-family: Arial, sans-serif;
-    //     color: ${rgbCorFonte}
-    //   }`;
-
-    // this.renderer.appendChild(header, styleElement);
     }
   }
 
-  private alteraCorFonte(): void {
-    //1 - Alterar a cor da fonte geral'
+  private alteraBackgroundColorFooter(codigoRGB: string): void {
+    const footer = document.querySelector('app-footer-base');
+    if (footer) {
+      const footerFull = footer.querySelector('.footer-full');
+      if (footerFull) {
+        this.renderer.setStyle(footerFull, 'background-color', codigoRGB);
+      }
+    }
   }
+
+  private alteraCorFonte(rgbCorFonte: string): void {
+    const sidebar = document.querySelector('app-root');
+    if (sidebar) {
+      const styleElement = document.createElement('style');
+      styleElement.innerHTML = `
+        * {
+          color: ${rgbCorFonte};
+        }
+      `;
+      this.renderer.appendChild(sidebar, styleElement);
+    }
+  }
+
 
 
   private alteraImagensCarousel(): void {
@@ -93,27 +104,4 @@ export default class AppComponent {
   private alteraTextoBeneficiarioValidorBoletos(): void {
     //4 - Alterar o modal do validador de boletos com o beficiário de acordo com a marca (valido e invalido)
   }
-
-
-
-
-
-  private alterarFooter(codigoRGB: string): void {
-    const footer = document.querySelector('app-footer-base');
-    if (footer) {
-      const footerFull = footer.querySelector('.footer-full');
-      if (footerFull) {
-        this.renderer.setStyle(footerFull, 'background-color', codigoRGB);
-      }
-    }
-  }
-
-
-  // private alterarSidebar(): void {
-  //   const sidebar = document.querySelector('app-sidebar');
-  //   if (sidebar) {
-  //     this.renderer.setStyle(sidebar, 'background-color', 'green');
-  //     this.renderer.setProperty(sidebar, 'innerText', 'Novo Texto do Sidebar');
-  //   }
-  // }
 }

@@ -1,51 +1,47 @@
-* {
-    font-family: Arial, sans-serif;
-    color: #095b73;
-  }
 
 .sidebar {
-    position: fixed;
-    top: 80px;
-    width: 312px;
-    height: 100%;
-    background-color: #ffffff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    font-size: 18px;
-    font-weight: bold;
+  position: fixed;
+  top: 80px;
+  width: 312px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  font-size: 18px;
+  font-weight: bold;
 
-  }
+}
 
-  .menu ul {
-    list-style: none;
-    padding: 0;
-    margin-left: 10px;
-  }
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 10px;
+}
 
-  .menu-item {
-    margin-bottom: 10px;
-  }
+.menu-item {
+  margin-bottom: 10px;
+}
 
-  .menu-item a {
-    text-decoration: none;
-    display: block;
-    margin-top: 30px;
-  }
+.menu-item a {
+  text-decoration: none;
+  display: block;
+  margin-top: 30px;
+}
 
-  .menu-item a:hover {
-    background-color: #f1f1f1;
-  }
+.menu-item a:hover {
+  background-color: #f1f1f1;
+}
 
-  .has-submenu .submenu {
-    display: none;
-    padding-left: 12px;
-    font-weight: normal;
-  }
+.has-submenu .submenu {
+  display: none;
+  padding-left: 12px;
+  font-weight: normal;
+}
 
-  .has-submenu:hover .submenu {
-    display: block;
-  }
+.has-submenu:hover .submenu {
+  display: block;
+}
 
-  .bi-chevron-down {
-    float: right;
-  }
+.bi-chevron-down {
+  float: right;
+}
