@@ -9,14 +9,7 @@ import { Component, Renderer2 } from '@angular/core';
 export default class AppComponent {
   constructor(private renderer: Renderer2) { }
 
-  flagEmpresa: string = 'volks';
-
-  // ngonInit() {
-  //   alert('ngonInit');
-  //   // 
-
-  // }
-
+  flagEmpresa: string = 'carbank';
 
   ngOnInit() {
     this.alterarEstiloETexto(this.flagEmpresa);
@@ -41,29 +34,45 @@ export default class AppComponent {
 
   private alterarParaVolks(): void {
 
-    this.alteraCorFonte();
-    this.alterarFooter('##095b73');
-    this.alteraImagensCarousel();
-    this.alteraTextoSubmenuProtege();
-    this.alteraTextoBeneficiarioValidorBoletos();
+    // this.alteraCorFonte();
+    this.alterarFooter('#095b73');
+    // this.alteraImagensCarousel();
+    // this.alteraTextoSubmenuProtege();
+    // this.alteraTextoBeneficiarioValidorBoletos();
 
   }
   private alterarParaPorsche(): void {
-    // this.alteraCorFonte();
+
+    this.alterarHeader('https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-0.png');
     this.alterarFooter('#403F44');
     // this.alteraImagensCarousel();
     // this.alteraTextoSubmenuProtege();
     // this.alteraTextoBeneficiarioValidorBoletos();
   }
-  private alterarParaCarbank(): void {
 
-    this.alteraCorFonte();
+  private alterarParaCarbank(): void {
+    this.alterarHeader('https://cdn.bancovw.com.br/cdn/whitelabel/whl6100000/logoCarBankTransp.png');
     this.alterarFooter('#00984A');
+    this.alteraCorFonte();
+
     this.alteraImagensCarousel();
     this.alteraTextoSubmenuProtege();
     this.alteraTextoBeneficiarioValidorBoletos();
   }
 
+  private alterarHeader(imgSource: string): void {
+    const header = document.querySelector('app-header');
+    if (header) {
+      const imgLogo = header.querySelector('#imgLogo');
+      if (imgLogo) {
+        console.log(imgLogo);
+        console.log(imgSource);
+        this.renderer.setAttribute(imgLogo, 'src', imgSource);
+      }
+      // this.renderer.setStyle(header, 'background-color', 'blue');
+      // this.renderer.setProperty(header, 'innerText', 'Novo Texto do Header');
+    }
+  }
 
   private alteraCorFonte(): void {
     //1 - Alterar a cor da fonte geral'
@@ -84,13 +93,7 @@ export default class AppComponent {
   }
 
 
-  private alterarHeader(): void {
-    const header = document.querySelector('app-header');
-    if (header) {
-      this.renderer.setStyle(header, 'background-color', 'blue');
-      this.renderer.setProperty(header, 'innerText', 'Novo Texto do Header');
-    }
-  }
+
 
 
   private alterarFooter(codigoRGB: string): void {
