@@ -18,35 +18,36 @@ export default class AppComponent {
   alterarEstiloETexto(flagEmpresa: string): void {
     switch (flagEmpresa) {
       case 'volks':
-        this.alterarParaVolks();
+        this.volks();
         break;
       case 'porsche':
-        this.alterarParaPorsche();
+        this.porsche();
         break;
       case 'carbank':
-        this.alterarParaCarbank();
+        this.carbank();
         break;
       default:
+        this.volks();
         console.warn('Empresa não encontrada');
     }
   }
 
 
-  private alterarParaVolks(): void {
+  private volks(): void {
 
     this.alterarHeader('https://www.basketball-loewen.de/wp-content/uploads/2022/12/VWFS_LOGO-980-e1671006285144.jpg', '#095b73');
     this.alterarFooter('#095b73');
     
 
   }
-  private alterarParaPorsche(): void {
+  private porsche(): void {
 
     this.alterarHeader('https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-0.png', '#000000');
     this.alterarFooter('#403F44');
    
   }
 
-  private alterarParaCarbank(): void {
+  private carbank(): void {
     this.alterarHeader('https://cdn.bancovw.com.br/cdn/whitelabel/whl6100000/logoCarBankTransp.png', '#00984A');
     this.alterarFooter('#00984A');
   }
