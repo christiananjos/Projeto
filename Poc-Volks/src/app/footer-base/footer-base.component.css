@@ -1,3 +1,13 @@
 * {
-    font-family: Arial, sans-serif;
-  }
+  font-family: Arial, sans-serif;
+}
+
+
+.footer-full {
+  width: 100%;
+  background-color: #095b73;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
