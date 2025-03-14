@@ -15,8 +15,6 @@ export default class AppComponent {
 
   ngOnInit() {
     this.marcas(this.flagEmpresa);
-    this.listarComponentes();
-    this.alteraCssMainContent();
   }
 
   marcas(flagEmpresa: string): void {
@@ -110,30 +108,4 @@ export default class AppComponent {
     }
   }
 
-  private listarComponentes(): void {
-    const componentes = [
-      'app-header',
-      'app-footer-base',
-      'app-root',
-      'app-sidebar',
-      'app-main-content'
-    ];
-
-    componentes.forEach(componente => {
-      const element = document.querySelector(componente);
-      if (element) {
-        console.log(`Componente encontrado: ${componente}`);
-      } else {
-        console.log(`Componente não encontrado: ${componente}`);
-      }
-    });
-  }
-
-  private alteraCssMainContent(): void {
-    const selector = document.querySelector('app-root app-main-content');
-    console.log(selector)
-    
-    
-    
-  }
 }
