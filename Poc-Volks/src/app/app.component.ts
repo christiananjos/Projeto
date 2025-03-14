@@ -9,7 +9,7 @@ import { Component, Renderer2 } from '@angular/core';
 export default class AppComponent {
   constructor(private renderer: Renderer2) { }
 
-  flagEmpresa: string = 'porsche';
+  flagEmpresa: string = 'volks';
   //porsche
   //carbank
 
