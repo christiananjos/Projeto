@@ -9,7 +9,9 @@ import { Component, Renderer2 } from '@angular/core';
 export default class AppComponent {
   constructor(private renderer: Renderer2) { }
 
-  flagEmpresa: string = 'carbank';
+  flagEmpresa: string = 'volks';
+  //porsche
+  //carbank
 
   ngOnInit() {
     this.marcas(this.flagEmpresa);
@@ -35,24 +37,24 @@ export default class AppComponent {
   private volks(): void {
     this.alteraCorFonte('#095b73');
     this.alteraLogoHeader('https://www.basketball-loewen.de/wp-content/uploads/2022/12/VWFS_LOGO-980-e1671006285144.jpg');
+    this.alteraCorFonteSidebar('#095b73');
     this.alteraBackgroundColorFooter('#095b73');
-    this.alteraCorFonte('#095b73')
 
 
   }
   private porsche(): void {
     this.alteraCorFonte('#000000');
     this.alteraLogoHeader('https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-0.png');
+    this.alteraCorFonteSidebar('#000000');
     this.alteraBackgroundColorFooter('#403F44');
-    this.alteraCorFonte('#403F44')
 
   }
 
   private carbank(): void {
     this.alteraCorFonte('#00984A');
     this.alteraLogoHeader('https://cdn.bancovw.com.br/cdn/whitelabel/whl6100000/logoCarBankTransp.png');
+    this.alteraCorFonteSidebar('#00984A');
     this.alteraBackgroundColorFooter('#00984A');
-    this.alteraCorFonte('#00984A')
   }
 
   private alteraLogoHeader(imgSource: string): void {
@@ -78,15 +80,15 @@ export default class AppComponent {
   }
 
   private alteraCorFonte(rgbCorFonte: string): void {
-    const sidebar = document.querySelector('app-root');
-    if (sidebar) {
+    const app = document.querySelector('app-root');
+    if (app) {
       const styleElement = document.createElement('style');
       styleElement.innerHTML = `
         * {
           color: ${rgbCorFonte};
         }
       `;
-      this.renderer.appendChild(sidebar, styleElement);
+      this.renderer.appendChild(app, styleElement);
     }
   }
 
@@ -95,13 +97,21 @@ export default class AppComponent {
   private alteraImagensCarousel(): void {
     //2 - Alterar as imagens do carousel para cada marca
   }
-  private alteraTextoSubmenuProtege(): void {
-    //3 - Alterar texto submenu Seguros e Serviços > Vw Protege / Porsche Protege / Carbank Protege
-    //3.1 Alterar o texto do cabeçalho para cada marca.
-    //3.2 Alterar a imagem do cabeçalho para cada marca.
-  }
 
   private alteraTextoBeneficiarioValidorBoletos(): void {
     //4 - Alterar o modal do validador de boletos com o beficiário de acordo com a marca (valido e invalido)
+  }
+
+  private alteraCorFonteSidebar(rgbCorFonte: string): void {
+    const app = document.querySelector('app-sidebar');
+    if (app) {
+      const styleElement = document.createElement('style');
+      styleElement.innerHTML = `
+        * {
+          color: ${rgbCorFonte};
+        }
+      `;
+      this.renderer.appendChild(app, styleElement);
+    }
   }
 }
