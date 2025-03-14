@@ -18,6 +18,7 @@ export class MainContentComponent {
 
   ngOnInit() {
     this.validateOnLoad();
+    this.getFontColor('atualizacaoCadastral');
   }
 
   validateOnLoad() {
@@ -30,7 +31,7 @@ export class MainContentComponent {
       this.txtEmAtraso = "EM ATRASO";
       this.HabilitaDivMensagemCobranca();
 
-     
+
     }
   }
 
@@ -49,7 +50,7 @@ export class MainContentComponent {
   changeFontColorToGreen() {
     const element = document.getElementById('statusContrato');
     if (element) {
-      element.style.color ='#3CBE00';
+      element.style.color = '#3CBE00';
     }
   }
 
@@ -66,5 +67,22 @@ export class MainContentComponent {
       element.style.display = 'block';
     }
   }
-  
+
+  getFontColor(elementId: string) {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const fontColor = window.getComputedStyle(element).color;
+      console.log(`The font color of the element with id ${elementId} is ${fontColor}`);
+      this.changeButtonBackgroundColor(fontColor);
+    }
+  }
+
+  changeButtonBackgroundColor(newColor: string) {
+    const buttons = document.getElementsByClassName('button-style');
+    for (let i = 0; i < buttons.length; i++) {
+      const button = buttons[i] as HTMLElement;
+      button.style.backgroundColor = newColor;
+    }
+  }
+
 }

@@ -15,6 +15,8 @@ export default class AppComponent {
 
   ngOnInit() {
     this.marcas(this.flagEmpresa);
+    this.listarComponentes();
+    this.alteraCssMainContent();
   }
 
   marcas(flagEmpresa: string): void {
@@ -38,6 +40,7 @@ export default class AppComponent {
     this.alteraCorFonte('#095b73');
     this.alteraLogoHeader('https://www.basketball-loewen.de/wp-content/uploads/2022/12/VWFS_LOGO-980-e1671006285144.jpg');
     this.alteraCorFonteSidebar('#095b73');
+    // this.alteraButtonMainContent('#095b73');
     this.alteraBackgroundColorFooter('#095b73');
 
 
@@ -46,6 +49,7 @@ export default class AppComponent {
     this.alteraCorFonte('#000000');
     this.alteraLogoHeader('https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-0.png');
     this.alteraCorFonteSidebar('#000000');
+    // this.alteraButtonMainContent('#000000');
     this.alteraBackgroundColorFooter('#403F44');
 
   }
@@ -54,6 +58,7 @@ export default class AppComponent {
     this.alteraCorFonte('#00984A');
     this.alteraLogoHeader('https://cdn.bancovw.com.br/cdn/whitelabel/whl6100000/logoCarBankTransp.png');
     this.alteraCorFonteSidebar('#00984A');
+    // this.alteraButtonMainContent('#00984A');
     this.alteraBackgroundColorFooter('#00984A');
   }
 
@@ -92,16 +97,6 @@ export default class AppComponent {
     }
   }
 
-
-
-  private alteraImagensCarousel(): void {
-    //2 - Alterar as imagens do carousel para cada marca
-  }
-
-  private alteraTextoBeneficiarioValidorBoletos(): void {
-    //4 - Alterar o modal do validador de boletos com o beficiário de acordo com a marca (valido e invalido)
-  }
-
   private alteraCorFonteSidebar(rgbCorFonte: string): void {
     const app = document.querySelector('app-sidebar');
     if (app) {
@@ -113,5 +108,32 @@ export default class AppComponent {
       `;
       this.renderer.appendChild(app, styleElement);
     }
+  }
+
+  private listarComponentes(): void {
+    const componentes = [
+      'app-header',
+      'app-footer-base',
+      'app-root',
+      'app-sidebar',
+      'app-main-content'
+    ];
+
+    componentes.forEach(componente => {
+      const element = document.querySelector(componente);
+      if (element) {
+        console.log(`Componente encontrado: ${componente}`);
+      } else {
+        console.log(`Componente não encontrado: ${componente}`);
+      }
+    });
+  }
+
+  private alteraCssMainContent(): void {
+    const selector = document.querySelector('app-root app-main-content');
+    console.log(selector)
+    
+    
+    
   }
 }
