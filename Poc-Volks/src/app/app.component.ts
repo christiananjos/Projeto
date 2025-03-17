@@ -9,7 +9,7 @@ import { Component, Renderer2 } from '@angular/core';
 export default class AppComponent {
   constructor(private renderer: Renderer2) { }
 
-  flagEmpresa: string = 'porsche';
+  flagEmpresa: string = 'volks';
   //porsche
   //carbank
 
@@ -47,6 +47,7 @@ export default class AppComponent {
     this.alteraCorFonteSidebar('#000000');
     this.alteraBackgroundColorFooter('#403F44');
     this.alteraTextoFooter('@ Porsche Financial Services | Todos os direitos reservados.')
+    this.DesabilitaVwProtege();
 
 
   }
@@ -56,7 +57,8 @@ export default class AppComponent {
     this.alteraLogoHeader('https://cdn.bancovw.com.br/cdn/whitelabel/whl6100000/logoCarBankTransp.png');
     this.alteraCorFonteSidebar('#00984A');
     this.alteraBackgroundColorFooter('#00984A');
-    this.alteraTextoFooter('@CarBank Brasil | Todos os direitos reservados.')
+    this.alteraTextoFooter('@CarBank Brasil | Todos os direitos reservados.');
+    this.DesabilitaVwProtege();
   }
 
   private alteraLogoHeader(imgSource: string): void {
@@ -117,6 +119,18 @@ export default class AppComponent {
     }
 
 
+  }
+
+  private DesabilitaVwProtege(): void{
+    const sidebar = document.querySelector('app-sidebar');
+    if (sidebar) {
+      const element = sidebar.querySelector('#vwProtege');
+
+      if (element) {
+        console.log(element)
+        this.renderer.setStyle(element, 'display', 'none');
+      }
+    }
   }
 
 }
