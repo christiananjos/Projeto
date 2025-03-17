@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './footer-base.component.css'
 })
 export class FooterBaseComponent {
+ textoMarca =  ''
+
+ ngOnInit() {
+  const currentYear = new Date().getFullYear();
+  this.textoMarca = `${currentYear} Volkswagen Financial Services | `;
+}
 
 }
