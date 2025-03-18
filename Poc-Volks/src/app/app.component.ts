@@ -10,6 +10,7 @@ export default class AppComponent {
   constructor(private renderer: Renderer2) { }
 
   flagEmpresa: string = 'volks';
+  fonteColor: string = '';
   //porsche
   //carbank
 
@@ -35,16 +36,21 @@ export default class AppComponent {
 
 
   private volks(): void {
-    this.alteraCorFonte('#095b73');
+    this.fonteColor = '#095b73';
+
+
+    this.alteraCorFonte(this.fonteColor);
     this.alteraLogoHeader('https://www.basketball-loewen.de/wp-content/uploads/2022/12/VWFS_LOGO-980-e1671006285144.jpg');
-    this.alteraCorFonteSidebar('#095b73');
-    this.alteraBackgroundColorFooter('#095b73');
+    this.alteraCorFonteSidebar(this.fonteColor);
+    this.alteraBackgroundColorFooter(this.fonteColor);
 
   }
   private porsche(): void {
-    this.alteraCorFonte('#000000');
+    this.fonteColor = '#000000';
+
+    this.alteraCorFonte(this.fonteColor);
     this.alteraLogoHeader('https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-0.png');
-    this.alteraCorFonteSidebar('#000000');
+    this.alteraCorFonteSidebar(this.fonteColor);
     this.alteraBackgroundColorFooter('#403F44');
     this.alteraTextoFooter('@ Porsche Financial Services | Todos os direitos reservados.')
     this.DesabilitaVwProtege();
@@ -53,10 +59,12 @@ export default class AppComponent {
   }
 
   private carbank(): void {
-    this.alteraCorFonte('#00984A');
+    this.fonteColor = '#00984A';
+
+    this.alteraCorFonte(this.fonteColor);
     this.alteraLogoHeader('https://cdn.bancovw.com.br/cdn/whitelabel/whl6100000/logoCarBankTransp.png');
-    this.alteraCorFonteSidebar('#00984A');
-    this.alteraBackgroundColorFooter('#00984A');
+    this.alteraCorFonteSidebar(this.fonteColor);
+    this.alteraBackgroundColorFooter(this.fonteColor);
     this.alteraTextoFooter('@CarBank Brasil | Todos os direitos reservados.');
     this.DesabilitaVwProtege();
   }

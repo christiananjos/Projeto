@@ -17,7 +17,7 @@ export class ValidadorBoletosComponent {
 
   codigoBarrasValido: boolean = false;
 
-  mensagemErroBoleto: string = 'O código de barras informmado é inválido, apresenta irregularidades ou não foi emitido pela Volkswagen S.A. Por favor, verifique as informações e tente novamente.';
+  mensagemErroBoleto: string = 'O código de barras informado é inválido, apresenta irregularidades ou não foi emitido pela Volkswagen S.A. Por favor, verifique as informações e tente novamente.';
 
   
 
